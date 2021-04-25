@@ -1,0 +1,32 @@
+ALGORITHM linear prob 2
+VAR
+    i,j,sum :INTEGER ;=0
+    arr1 :Array :=[10, 12, 16, 5];
+    arr2 :Array :=[13, 12, 14, 6];
+BEGIN
+    FOR i FROM 0 TO arr1.length-1 STEP 1 DO
+        j :=0;
+        WHILE (j < arr2.length-1) DO
+            IF (arr1[i] != arr2[j] && == arr2.length-1) THEN {
+                sum += arr1[i];
+            }ELSE
+                IF (arr1[i] == arr2[j]) THEN{
+                    break;
+                }
+                j++;
+            END_IF
+        END_WHILE
+    END_FOR
+    FOR i FROM 0 TO arr2.length-1 STEP 1 DO
+        j :=0;
+        WHILE (j < arr1.length-1) DO
+            if (arr2[i] != arr[j] && j == arr2.length-1){
+                sum += arr2[i];
+            }ELSE IF (arr2[i] == arr1 [j]) THEN {
+                break;
+            }
+            j++;
+            END_IF
+        END_WHILE
+    END_FOR
+END

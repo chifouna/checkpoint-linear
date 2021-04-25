@@ -1,0 +1,37 @@
+ALGORITHM linear data prob 1
+VAR
+    htab : hash-table < INTEGER, INTEGER>;
+    setOne Array := {3, 1, 7 ,9};
+    setTwo Array := {2, 4, 1, 9, 3};
+    i, j : INTEGER :=0
+BEGIN
+    FOR i FROM 0 TO setOne.length-1 STEP 1 DO
+    int element := setOne[i];
+        IF (htab.contaisKey(element)) THEN {
+        int count:= htab.get(element);
+        htab.insert(element,count+1)
+        }
+        ELSE
+            htab.insert(element, 1);
+        END_IF
+    END_FOR
+    FOR i FROM 0 TO setTwo.length-1 STEP 1 DO
+    int element:= setTwo[i];
+        IF (htab.containsKey(elemet)) THEN {
+        int count := htab.get(element);
+        htab.insert(element, count+1);
+        }
+        ELSE
+            htab.insert(element, 1);
+        END_IF
+    END_FOR
+    sum: INTEGER:= 0;
+    Set<INTEGER> Set :=htab.keySet();
+    iterator<INTEGER> iterator :=Set.iterator();
+    WHILE (iterator.hasNext()) DO
+        int key := iterator.next(;
+        if(htab.get(key)==1);
+        sum+= key;
+    END_WHILE
+    print ("Distinct Elements Sum :", sum);
+END
